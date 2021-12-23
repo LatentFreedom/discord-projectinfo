@@ -1,0 +1,14 @@
+{
+    "projectinfo": {
+        "name" : "Project Name",
+        "about": "This is a description about the project.",
+        "release": "4/20/2022",
+        "price": "0.42069 ETH",
+        "supply": "6969",
+        "links": {
+            "website": "https://discord.com",
+            "twitter": "https://twitter.com/discord"
+        },
+        "sneakpeak": "./images/sneakpeak"
+    }
+}
