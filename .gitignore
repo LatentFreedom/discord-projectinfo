@@ -3,4 +3,4 @@ package-lock.json
 .env
 .DS_Store
 discord_projectinfo.service
-images/sneakpeak/*.png
+images/sneakpeek/*.png

@@ -34,7 +34,7 @@ CHANNEL_ID=
             "website": "https://discord.com",
             "twitter": "https://twitter.com/discord"
         },
-        "sneakpeak": "./images/sneakpeak"
+        "sneakpeak": "./images/sneakpeek"
     }
 }
 ```
@@ -46,4 +46,4 @@ CHANNEL_ID=
 4. **about:** Show about paragraph for the project
 5. **links:** Send official project links
 6. **release:** Show release date for the project
-7. **sneakpeak:** Send random sneak peak image
+7. **sneakpeek:** Send random sneak peak image

@@ -30,7 +30,7 @@ const styleHelpMessage = async () => {
         { name: '/about', value: 'Show info about the project' },
         { name: '/links', value: 'Send the official project links' },
         { name: '/release', value: 'Show the release date for the project' },
-        { name: '/sneakpeak', value: 'Send a sneak peak picture for the project' },
+        { name: '/sneakpeek', value: 'Send a sneak peek picture for the project' },
     );
     return {embeds: [embed]};   
 }
@@ -67,12 +67,12 @@ const styleReleaseMessage = async () => {
     return {embeds: [embed]};
 }
 
-const styleSneakPeakMessage = async () => {
-    const files = fs.readdirSync(data.projectinfo.sneakpeak);
+const styleSneakPeekMessage = async () => {
+    const files = fs.readdirSync(data.projectinfo.sneakpeek);
     let chosenFile = files[Math.floor(Math.random() * files.length)];
-    const path = `${data.projectinfo.sneakpeak}/${chosenFile}`;
-    const embed = new MessageEmbed().setTitle('Sneak Peak')
-        .setDescription(`Check out this sneak peak from the vault!`)
+    const path = `${data.projectinfo.sneakpeek}/${chosenFile}`;
+    const embed = new MessageEmbed().setTitle('Sneak Peek')
+        .setDescription(`Check out this sneak peek from the vault!`)
         .setImage(`attachment://${path}`);
     return {embeds: [embed], files: [`${path}`]}; 
 }
@@ -114,10 +114,10 @@ const createCommands = () => {
             name: "release",
             description: "Show the release date for the project"
         });
-        // Show Sneak Peak
+        // Show Sneak Peek
         commands?.create({
-            name: "sneakpeak",
-            description: "Send a sneak peak picture for the project"
+            name: "sneakpeek",
+            description: "Send a sneak peek picture for the project"
         });
     });
 }
@@ -148,8 +148,8 @@ client.on('interactionCreate', async (interaction) => {
             content = await styleOfficialLinksMessage();
         } else if (commandName === 'release') {
             content = await styleReleaseMessage();
-        } else if (commandName === 'sneakpeak') {
-            content = await styleSneakPeakMessage();
+        } else if (commandName === 'sneakpeek') {
+            content = await styleSneakPeekMessage();
         }
         await interaction.editReply(content);
     } catch (err) {
