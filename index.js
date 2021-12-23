@@ -1,7 +1,6 @@
 const {Constants, Client, Intents, MessageEmbed} = require('discord.js');
 require('dotenv').config();
 const fs = require('fs');
-const { title } = require('process');
 
 const client = new Client({
     intents : [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MEMBERS, Intents.FLAGS.GUILD_MESSAGES]
